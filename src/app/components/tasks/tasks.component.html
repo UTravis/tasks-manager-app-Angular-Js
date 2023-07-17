@@ -1,0 +1,11 @@
+<app-add-task
+*ngIf="hasRoute('/')"
+  (newTaskEmitter)="addTask($event)"
+></app-add-task>
+<app-task-item
+  *ngFor="let task of tasks"
+  [task]="task"
+  (delEventEmitter)="delTask(task)"
+  (dblBtnEventEmitter)="updateReminder(task)"
+>
+</app-task-item>

@@ -1,0 +1,6 @@
+<footer>
+  <p>Copyright &copy; 2023</p>
+  <a routerLink="about">About</a> /
+  <a routerLink="tasks">Tasks</a> /
+  <a routerLink="" *ngIf="hasRoute('/tasks')">Home</a>
+</footer>
